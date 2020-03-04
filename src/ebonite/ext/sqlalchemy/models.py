@@ -65,11 +65,11 @@ class Attaching:
     @classmethod
     @abstractmethod
     def get_kwargs(cls, obj: T) -> dict:
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def to_obj(self) -> T:
-        pass
+        pass  # pragma: no cover
 
 
 Base = declarative_base()

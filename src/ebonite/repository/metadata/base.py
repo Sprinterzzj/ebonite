@@ -56,7 +56,7 @@ class MetadataRepository:
 
         :return: all projects in the repository
         """
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_project_by_name(self, name: str) -> Optional['core.Project']:
@@ -66,7 +66,7 @@ class MetadataRepository:
         :param name: name of the project to return
         :return: found project if exists or `None`
         """
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_project_by_id(self, id: str) -> Optional['core.Project']:
@@ -76,7 +76,7 @@ class MetadataRepository:
         :param id: project id
         :return: found project if exists or `None`
         """
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def create_project(self, project: Project) -> Project:
@@ -87,7 +87,7 @@ class MetadataRepository:
         :return: created project
         :exception: :exc:`.errors.ExistingProjectError` if given project has the same name as existing one.
         """
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def update_project(self, project: Project) -> Project:
@@ -98,7 +98,7 @@ class MetadataRepository:
         :return: updated project
         :exception: :exc:`.errors.NonExistingProjectError` if given project doesn't exist in the repository
         """
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def delete_project(self, project: Project):
@@ -109,7 +109,7 @@ class MetadataRepository:
         :return: nothing
         :exception: :exc:`.errors.NonExistingProjectError` if given project doesn't exist in the repository
         """
-        pass
+        pass  # pragma: no cover
 
     def save_project(self, project: Project) -> Project:
         """
@@ -149,7 +149,7 @@ class MetadataRepository:
         :return: project tasks
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_task_by_name(self, project: ProjectVar, task_name: str) -> Optional['core.Task']:
@@ -161,7 +161,7 @@ class MetadataRepository:
         :return: task if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_task_by_id(self, id: str) -> Optional['core.Task']:
@@ -172,7 +172,7 @@ class MetadataRepository:
         :return: task if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     def get_or_create_task(self, project: str, task_name: str) -> Task:
         """
@@ -200,7 +200,7 @@ class MetadataRepository:
         :exception: :class:`.errors.ExistingTaskError` if given task has the same name and project as existing one
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def update_task(self, task: Task) -> Task:
@@ -212,7 +212,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingTaskError` if given tasks doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def delete_task(self, task: Task):
@@ -224,7 +224,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingTaskError` if given tasks doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     def save_task(self, task: Task) -> Task:
         """
@@ -256,7 +256,7 @@ class MetadataRepository:
         :return: found models
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_model_by_name(self, model_name, task: TaskVar, project: ProjectVar = None) -> Optional['core.Model']:
@@ -269,7 +269,7 @@ class MetadataRepository:
         :return: found model if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_model_by_id(self, id: str) -> Optional['core.Model']:
@@ -280,7 +280,7 @@ class MetadataRepository:
         :return: found model if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def create_model(self, model: Model) -> Model:
@@ -291,7 +291,7 @@ class MetadataRepository:
         :return: created model
         :exception: :exc:`.errors.ExistingModelError` if given model has the same name and task as existing one
         """
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def update_model(self, model: Model) -> Model:
@@ -303,7 +303,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingModelError` if given model doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def delete_model(self, model: Model):
@@ -315,7 +315,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingModelError` if given model doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     def save_model(self, model: Model) -> Model:
         """
@@ -349,7 +349,7 @@ class MetadataRepository:
         :return: found images
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_image_by_name(self, image_name, model: ModelVar, task: TaskVar = None, project: ProjectVar = None) -> Optional['core.Image']:
@@ -363,7 +363,7 @@ class MetadataRepository:
         :return: found image if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_image_by_id(self, id: str) -> Optional['core.Image']:
@@ -374,7 +374,7 @@ class MetadataRepository:
         :return: found image if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def create_image(self, image: Image) -> Image:
@@ -386,7 +386,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.ExistingImageError` if given image has the same name and model as existing one
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def update_image(self, image: Image) -> Image:
@@ -398,7 +398,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingImageError` if given image doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def delete_image(self, image: Image):
@@ -410,7 +410,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingImageError` if given image doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     def save_image(self, image: Image) -> Image:
         """
@@ -439,7 +439,7 @@ class MetadataRepository:
         :return: found runtime environments
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_environment_by_name(self, name) -> Optional['core.RuntimeEnvironment']:
@@ -450,7 +450,7 @@ class MetadataRepository:
         :return: found runtime environment if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_environment_by_id(self, id: str) -> Optional['core.RuntimeEnvironment']:
@@ -461,7 +461,7 @@ class MetadataRepository:
         :return: found runtime environment if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def create_environment(self, environment: 'core.RuntimeEnvironment') -> 'core.RuntimeEnvironment':
@@ -473,7 +473,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.ExistingEnvironmentError` if given runtime environment has the same name as existing one
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def update_environment(self, environment: 'core.RuntimeEnvironment') -> 'core.RuntimeEnvironment':
@@ -485,7 +485,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingEnvironmentError` if given runtime environment doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def delete_environment(self, environment: 'core.RuntimeEnvironment'):
@@ -497,7 +497,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingEnvironmentError` if given runtime environment doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     def save_environment(self, environment: 'core.RuntimeEnvironment') -> 'core.RuntimeEnvironment':
         """
@@ -529,7 +529,7 @@ class MetadataRepository:
         :return: found instances
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_instance_by_name(self, instance_name, image: Union[str, 'core.Image'],
@@ -543,7 +543,7 @@ class MetadataRepository:
         :return: found instance if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def get_instance_by_id(self, id: str) -> Optional['core.RuntimeInstance']:
@@ -554,7 +554,7 @@ class MetadataRepository:
         :return: found instance if exists or `None`
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def create_instance(self, instance: 'core.RuntimeInstance') -> 'core.RuntimeInstance':
@@ -567,7 +567,7 @@ class MetadataRepository:
             as existing one
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def update_instance(self, instance: 'core.RuntimeInstance') -> 'core.RuntimeInstance':
@@ -579,7 +579,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingInstanceError` if given instance doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def delete_instance(self, instance: 'core.RuntimeInstance'):
@@ -591,7 +591,7 @@ class MetadataRepository:
         :exception: :exc:`.errors.NonExistingInstanceError` if given instance doesn't exist in the repository
         """
 
-        pass
+        pass  # pragma: no cover
 
     def save_instance(self, instance: 'core.RuntimeInstance') -> 'core.RuntimeInstance':
         """

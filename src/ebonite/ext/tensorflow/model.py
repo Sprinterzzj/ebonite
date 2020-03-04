@@ -22,11 +22,11 @@ class _TFDump:
 
     @abstractmethod
     def dump(self, session, path) -> FilesContextManager:
-        pass
+        pass  # pragma: no cover
 
     @abstractmethod
     def load(self, session, path) -> tf.Graph:
-        pass
+        pass  # pragma: no cover
 
 
 class _Saver(_TFDump):
